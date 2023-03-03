@@ -221,7 +221,7 @@ class RedPitaya(object):
             self.end_ssh()
         except:
             pass
-        if self.parameters['hostname'] == "_FAKE_REDPITAYA_":
+        if self.parameters['hostname'] in ["_FAKE_REDPITAYA_", "_FAKE_"]:
             # simulation mode - start without connecting
             self.logger.warning("(Re-)starting client in dummy mode...")
             self.startdummyclient()
